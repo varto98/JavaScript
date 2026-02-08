@@ -5,8 +5,184 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sebastian Varisto</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/132f88a766.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "dwdwoC4WzLYsPuqyq",
+      });
+   })();
+</script>
 </head>
 <body>
-    test
+    <section id="landing-page">
+        <nav class="nav__bar">
+            <div class="nav__container">
+                <img class="nav__logo" src="./SV Logo.svg" alt="">
+                <ul class="nav__links">
+                    <li class="nav__link"><a href="#" class="
+                        nav__link--anchor
+                        link__hover-effect
+                        link__hover-effect--black">About</a>
+                    </li>
+                    <li class="nav__link"><a href="#" class="
+                        nav__link--anchor
+                        link__hover-effect
+                        link__hover-effect--black">Projects</a>
+                    </li>
+                    <li class="nav__link"><a href="#" class="
+                        nav__link--anchor
+                        link__hover-effect
+                        link__hover-effect--black">Contact</a>
+                    </li>
+                    <li class="nav__link"><a href="#" class="
+                        dark__mode
+                        nav__link--anchor
+                        link__hover-effect
+                        link__hover-effect--black"><i class="fas fa-adjust"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <header class="header">
+            <div class="header__content">
+                <h1 class="header__title">Hello,</h1>
+                <div class="header__name">I'm <span class="color__text">Sebastian.</span></div>
+                <p class="header__subtitle">I'm a <span class="color__text">Frontend Software Developer</span> crafting beautiful and functional websites with great user experiences. Here's a bit more <span class="color__text">about me.</span></p>
+                <div class="social__links">
+                    <a href="#" class="social__link click" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="social__link click" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" class="social__link click" target="_blank"><i class="fa-solid fa-file-pdf"></i></a>
+                </div>
+            </div>
+        </header>
+        <button class="mail__btn click">
+            <i class="fas fa-envelope"></i>
+        </button>
+        <a href="#projects" class="scroll">
+            <div class="scroll__icon click"></div>
+        </a> 
+    </section>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
+                <h4 class="modal__subtitle modal__subtitle--about">Frontend Software Developer</h4>
+                <p class="modal__para">I'm a 27 year-old Argentinian frontend software developer with a strong passion for developing websites with great user experiences.
+                    I currently work on difficult frontend design problems and learn from a team consisting of some of the most talented and experienced software engineers every day.
+                </p>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <img src="assets\HTML.png" alt="HTML Logo" class="modal__language--img">
+                        <span class="language__name">HTML</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img src="assets\CSS.webp" alt="CSS Logo" class="modal__language--img">
+                        <span class="language__name">CSS</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img src="assets\JS.webp" alt="JavaScript Logo" class="modal__language--img">
+                        <span class="language__name">JavaScript</span>
+                    </figure>
+                    <figure class="modal__language">
+                        <img src="assets\react.webp" alt="React Logo" class="modal__language--img">
+                        <span class="language__name">React</span>
+                    </figure>
+                </div>
+            </div>
+            <div class="modal__half modal__contact">
+                <h3 class="modal__title modal__title--contact">Send me a message!</h3>
+                <h4 class="modal__subtitle modal__subtitle--contact">I'm currently open to new opportunities.</h4>
+                <form id="contact__form" onsubmit="contact(event)">
+                    <div class="form__item">
+                        <label class="form__item--label" for="name">Name</label>
+                        <input class="input" name="user_name" type="text" required>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label" for="email">Email</label>
+                        <input class="input" name="user_email" type="email" required>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label" for="message">Message</label>
+                        <textarea class="input" name="message" type="text" required></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">Send it my way</button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">Thanks for your message!
+                </div>
+            </div>
+            <i class="fas fa-times modal__exit click"></i>
+        </div>
+    <section id="projects">
+        <div class="container">
+            <div class="row">
+                <h1 class="section__title">Here are some of my <span class="color__text">projects</span>
+                </h1>
+                <ul class="project__list">
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="assets\E-Commerce.png" alt="E-commerce Project Screenshot" class="project__img">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">E-commerce</h3>
+                                <h4 class="project__description--subtitle">HTML, CSS, JavaScript.</h4>
+                                <p class="project__description--para"></p>
+                                <div class="project__description--links">
+                                    <a href="" class="project__description--link"><i class="fas fa-link"></i></a>
+                                    <a href="" class="project__description--link"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="assets\TReact.png" alt="Treact Project Screenshot" class="project__img">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">Treact</h3>
+                                <h4 class="project__description--subtitle">HTML, CSS, JavaScript.</h4>
+                                <p class="project__description--para"></p>
+                                <div class="project__description--links">
+                                    <a href="" class="project__description--link"><i class="fas fa-link"></i></a>
+                                    <a href="" class="project__description--link"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container footer__container">
+            <div class="row footer__row">
+                <figure>
+                    <img src="./SV Logo.svg" alt="" class="footer__logo--img">
+                </figure>
+                <div class="footer__social--list">
+                    <a href="" class="footer__social--link 
+                                    link__hover-effect 
+                                    link__hover-effect--white">GitHub</a>
+                    <a href="" class="footer__social--link 
+                                    link__hover-effect 
+                                    link__hover-effect--white">LinkedIn</a>
+                    <a href="" class="footer__social--link 
+                                    link__hover-effect 
+                                    link__hover-effect--white">Contact</a>
+                    <a href="" class="footer__social--link 
+                                    link__hover-effect 
+                                    link__hover-effect--white">Resume</a>
+                </div>
+                <div class="footer__copyright">Copyright &copy; 2025 Sebastian Varisto
+                </div>
+            </div>
+        </div>
+    </footer>  
 </body>
-</html>
+</html> 
