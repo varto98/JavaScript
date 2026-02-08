@@ -378,6 +378,11 @@ footer {
     flex-direction: column;
     justify-content: center;
 }
+
+.modal__languages {
+    display: flex;
+}
+
 .modal__language {
     width: 25%;
     padding: 16px;
